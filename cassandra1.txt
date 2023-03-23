@@ -1,0 +1,23 @@
+#CREATE KEYSPACE 
+CREATE KEYSPACE IF NOT EXISTS clinical_trials WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+#CREATE TABLE
+CREATE TABLE IF NOT EXISTS clinical_trials.trials (
+   --- id uuid PRIMARY KEY,
+   --- name text,
+   --- description text,
+   --- phase text,
+   --- start_date date,
+   --- end_date date,
+   --- status text,
+   --- sponsor text,
+   --- location text
+);
+#INSERT VALUES
+INSERT INTO clinical_trials.trials (id, name, description, phase, start_date, end_date, status, sponsor, location) VALUES ('7cf43c02-e10b-4b05-a71d-68fba9e559f9', 'Trial 1', 'Description for Trial 1', 'Phase 1', '2023-03-01', '2023-06-01', 'In Progress', 'Sponsor 1', 'Location 1');
+
+INSERT INTO clinical_trials.trials (id, name, description, phase, start_date, end_date, status, sponsor, location) VALUES ('6a2e7a51-c6af-4559-a1c9-6a790b7a2f6d', 'Trial 2', 'Description for Trial 2', 'Phase 2', '2023-04-01', '2023-08-01', 'Recruiting', 'Sponsor 2', 'Location 2');
+#SELECT * FROM clinical_trials.trials;
+id                                   | name    | description           | phase   | end_date   | location  | sponsor   | start_date | status
+--------------------------------------+---------+-----------------------+---------+------------+-----------+-----------+------------+-------------
+ 7cf43c02-e10b-4b05-a71d-68fba9e559f9| Trial 1 | Description for Trial 1 | Phase 1 | 2023-06-01 | Location 1| Sponsor 1 | 2023-03-01 | In Progress
+6a2e7a51-c6af-4559-a1c9-6a790b7a2f6d | Trial 2 | Description for Trial 2 | Phase 2 | 2023-08-01 | Location 2| Sponsor 2 | 2023-04-01 | Recruiting
