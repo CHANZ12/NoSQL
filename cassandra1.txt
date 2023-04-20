@@ -12,12 +12,37 @@ CREATE TABLE IF NOT EXISTS clinical_trials.trials (
    --- sponsor text,
    --- location text
 );
+
+
+
+
+
+
+
 #INSERT VALUES
 INSERT INTO clinical_trials.trials (id, name, description, phase, start_date, end_date, status, sponsor, location) VALUES ('7cf43c02-e10b-4b05-a71d-68fba9e559f9', 'Trial 1', 'Description for Trial 1', 'Phase 1', '2023-03-01', '2023-06-01', 'In Progress', 'Sponsor 1', 'Location 1');
 
 INSERT INTO clinical_trials.trials (id, name, description, phase, start_date, end_date, status, sponsor, location) VALUES ('6a2e7a51-c6af-4559-a1c9-6a790b7a2f6d', 'Trial 2', 'Description for Trial 2', 'Phase 2', '2023-04-01', '2023-08-01', 'Recruiting', 'Sponsor 2', 'Location 2');
+
+INSERT INTO clinical_trials.trials (id, name, description, phase, start_date, end_date, status, sponsor, location)
+VALUES (3, 'Trial 3', 'Description for Trial 2', 'Phase 2', '2023-04-01', '2023-08-01', 'Recruiting', 'Sponsor 2', 'Location 3');
+
+INSERT INTO clinical_trials.trials (id, name, description, phase, start_date, end_date, status, sponsor, location)
+VALUES (4, 'Trial 4', 'Description for Trial 2', 'Phase 2', '2023-04-01', '2023-08-01', 'Recruiting', 'Sponsor 2', 'Location 4');
+
+INSERT INTO clinical_trials.trials (id, name, description, phase, start_date, end_date, status, sponsor, location)
+VALUES (5, 'Trial 5', 'Description for Trial 2', 'Phase 2', '2023-04-01', '2023-08-01', 'Recruiting', 'Sponsor 2', 'Location 5');
+
+
+
+
+
 #SELECT * FROM clinical_trials.trials;
-id                                   | name    | description           | phase   | end_date   | location  | sponsor   | start_date | status
+id| name    | description           | phase   | end_date   | location  | sponsor   | start_date | status
 --------------------------------------+---------+-----------------------+---------+------------+-----------+-----------+------------+-------------
- 7cf43c02-e10b-4b05-a71d-68fba9e559f9| Trial 1 | Description for Trial 1 | Phase 1 | 2023-06-01 | Location 1| Sponsor 1 | 2023-03-01 | In Progress
-6a2e7a51-c6af-4559-a1c9-6a790b7a2f6d | Trial 2 | Description for Trial 2 | Phase 2 | 2023-08-01 | Location 2| Sponsor 2 | 2023-04-01 | Recruiting
+1| Trial 1 | Description for Trial 1 | Phase 1 | 2023-06-01 | Location 1| Sponsor 1 | 2023-03-01 | In Progress
+2 | Trial 2 | Description for Trial 2 | Phase 2 | 2023-08-01 | Location 2| Sponsor 2 | 2023-04-01 | Recruiting
+3| Trial 1 | Description for Trial 1 | Phase 1 | 2023-06-01 | Location 1| Sponsor 1 | 2023-03-01 | In Progress
+4 | Trial 2 | Description for Trial 2 | Phase 2 | 2023-08-01 | Location 2| Sponsor 2 | 2023-04-01 | Recruiting
+5| Trial 1 | Description for Trial 1 | Phase 1 | 2023-06-01 | Location 1| Sponsor 1 | 2023-03-01 | In Progress
+6 | Trial 2 | Description for Trial 2 | Phase 2 | 2023-08-01 | Location 2| Sponsor 2 | 2023-04-01 | Recruiting
